@@ -1,0 +1,29 @@
+<h1>Listing microcuentos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>User</th>
+    <th>Likes</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @microcuentos.each do |microcuento| %>
+  <tr>
+    <td><%= microcuento.title %></td>
+    <td><%= microcuento.user_id %></td>
+    <td><%= microcuento.likes %></td>
+    <td><%= microcuento.content %></td>
+    <td><%= link_to 'Show', microcuento %></td>
+    <td><%= link_to 'Edit', edit_microcuento_path(microcuento) %></td>
+    <td><%= link_to 'Destroy', microcuento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Microcuento', new_microcuento_path %>

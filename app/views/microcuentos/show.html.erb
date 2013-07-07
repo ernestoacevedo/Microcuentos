@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @microcuento.title %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @microcuento.user_id %>
+</p>
+
+<p>
+  <b>Likes:</b>
+  <%= @microcuento.likes %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @microcuento.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_microcuento_path(@microcuento) %> |
+<%= link_to 'Back', microcuentos_path %>

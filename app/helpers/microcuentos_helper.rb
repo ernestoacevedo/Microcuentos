@@ -1,0 +1,2 @@
+module MicrocuentosHelper
+end
