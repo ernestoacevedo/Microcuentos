@@ -11,3 +11,238 @@
  *= require_self
  *= require_tree .
  */
+#titulo{
+	color: #FFF;
+	text-decoration: none;
+}
+
+ .user-form {
+  margin: 0;
+}
+.user-form div.divider {
+  margin: 1.5em 0;
+  text-align: center;
+  color: #666;
+}
+.user-form div.divider span.dashed-line {
+  border-bottom: 1px dashed #aaa;
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  margin: 0 12px 3px 12px;
+}
+.user-form input[type='text'],
+.user-form input[type='email'],
+.user-form input[type='password'],
+.user-form textarea {
+  width: 93%;
+}
+.user-form input[type='text'].name {
+  background: #ffffff url('/assets/user.png') no-repeat 95% 50%;
+}
+.user-form input[type='email'],
+.user-form .email {
+  background: #ffffff url('/assets/mail.png') no-repeat 95.5% 50%;
+}
+.user-form input[type='password'] {
+  background: #ffffff url('/assets/lock.png') no-repeat 94.5% 50%;
+}
+.user-form input[type='submit'] {
+  margin: 1.5em 0 0;
+  padding: 0.7em 0.5em;
+  width: 100%;
+}
+.user-form div.form-text {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.user-form div.form-text a {
+  color: #999;
+}
+.user-form div.form-text a:hover {
+  color: #444;
+}
+
+#signup-form {
+  width: 320px;
+  background: #fafafa;
+  padding-bottom: 2.5em;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 6px #dddddd;
+  -moz-box-shadow: 0 6px #dddddd;
+  box-shadow: 0 6px #dddddd;
+}
+#signup-form h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.mfp-container .mfp-close {
+  background: #e24844;
+}
+
+.btn.cta {
+  position: relative;
+  background: #e24844;
+  color: #fff;
+  padding: 25px 80px;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 6px #550f0d;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn.cta:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn.cta:hover {
+  background: #e24844;
+  box-shadow: 0 4px #550f0d;
+  top: 2px;
+}
+.btn.cta:active {
+  box-shadow: 0 0 #550f0d;
+  top: 6px;
+}
+
+.btn.facebook {
+  display: block;
+  margin: 0.3em 0 0;
+  padding: 0.5em 0.7em;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #3b5998;
+}
+.btn.facebook:before {
+  font-family: 'icomoon';
+  content: "\e2f8";
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+.btn.facebook:hover {
+  background: #344e86;
+}
+.btn.twitter {
+  display: block;
+  margin: 0.3em 0 0;
+  padding: 0.5em 0.7em;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #00acee;
+}
+.btn.twitter:before {
+  font-family: 'icomoon';
+  content: "\e2fc";
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+.btn.twitter:hover {
+  background: #009ad5;
+}
+.btn.google {
+  display: block;
+  margin: 0.3em 0 0;
+  padding: 0.5em 0.7em;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #db4a39;
+}
+.btn.google:before {
+  font-family: 'icomoon';
+  content: "\e2f4";
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+.btn.google:hover {
+  background: #d43927;
+}
+
+#clients {
+  width:auto;
+  height:80px;
+  border-top:1px #e3e3e3 solid;
+  padding-top:50px;
+}
+
+#clients img {
+  width: 160px;
+  height: 33px;
+  float: left;
+  list-style: none;
+  opacity: 0.4;
+  filter: alpha(opacity=50);
+  -webkit-transition: opacity 0.5s linear;
+}
+
+#clients img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: opacity 0.5s linear;
+
+}
+
+#clients img.right-margin {
+  margin-right: 15px;
+}
+
+.social-icons {
+  width:180px;
+  height:30px;
+  position:absolute;
+  top: 26px;
+}
+.social-icons img {
+  margin-right:2px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-transition: opacity 0.5s linear;
+
+  
+}
+.social-icons img:hover {
+  opacity:1;
+  filter:alpha(opacity=100); /* For IE8 and earlier */
+  -webkit-transition: opacity 0.2s linear;
+}
+
+
+footer {
+  height:80px;
+  position:relative;
+  border-top: #dedede 1px solid;
+}
+
+.footer-logo {
+  position:absolute;
+  top: 29px;
+  left: 34px;
+}
+
+.footer-text {
+  position:absolute;
+  top: 23px;
+  left: 156px;
+
+  
+}

@@ -41,6 +41,7 @@ class MicrocuentosController < ApplicationController
   # POST /microcuentos.json
   def create
     @microcuento = Microcuento.new(params[:microcuento])
+    @microcuento.user_id = current_user.id
 
     respond_to do |format|
       if @microcuento.save

@@ -1,0 +1,43 @@
+<ul class="grid cs-style-3">
+
+<% if @microcuentos != nil %>
+	<h2>Microcuentos recientes</h2>
+	<% @microcuentos.each do |microcuento| %>
+
+	<li>
+		<figure>
+		<img src="/assets/150x200.gif" alt="">
+		<figcaption>
+		<h5><%=microcuento.title%></h5>
+		<span>Autor: <%= microcuento.user.name %></span>
+		<a href="/microcuentos/<%=microcuento.id%>">Leer</a>
+		</figcaption>
+		</figure>
+	</li>
+
+	<% end %>
+<% else %>
+
+	<p> No hay microcuentos :(</p>
+
+<% end %>
+
+</ul>
+
+<div id="clients">
+	<div class="row">
+		<div class="span3">
+			<img alt="image" class="right-margin" src="/assets/client1.png">
+		</div>
+		<div class="span3">
+			<img alt="image" src="/assets/client2.png">
+		</div>
+		<div class="span3">
+			<img alt="image" src="/assets/client3.png">
+		</div>
+		<div class="span3">
+			<img alt="image" src="/assets/client4.png">
+		</div>
+	</div>
+
+</div>

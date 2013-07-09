@@ -3,12 +3,77 @@
 <head>
   <title>Microcuentos</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <div class="navbar">
+  <div class="navbar-inner">
+    <a id="titulo" class="brand" href="/">Microcuentos</a>
+    <ul class="nav">
+      <li class="active"><a href="/">.inicio</a></li>
+      <% if user_signed_in?%>
+        <li><a href="/microcuentos/new">.escribir</a></li>
+        <li><a href="#" >@<%= current_user.name %></a>
+        <ul>
+          <li><a href="">Perfil</a></li>
+          <li><a href="">Configuración</a></li>
+          <li><a href="/users/sign_out">Cerrar sesión</a></li>
+        </ul>
+        </li>
+        <% else %>
+        <li><a href="/users/sign_in">.ingresar</a></li>
+        <li><a href="#signup-form" class="modal-form signup">.únete</a></li>
+</li>
+        <% end %>
+    </ul>
+  </div>
+  </div>
+
+
 
 <%= yield %>
 
+
+    <!-- SIGN UP FORM MODAL -->
+    <form id="signup-form" class="mfp-hide white-popup-block zoom-anim-dialog user-form">
+      <h2>Únete a nosotros</h2>
+      <a href="#" class="btn facebook">Registrarse con Facebook</a>
+      <a href="#" class="btn twitter">Registrarse con Twitter</a>
+      <!-- <a href="#" class="btn google">Sign up with Google+</a> -->
+
+      <div class="divider"><span class="dashed-line"></span>ó<span class="dashed-line"></span></div>
+
+      <input type="text" name="name" class="name" maxlength="50" pattern="^.+$" required placeholder="Nombre" />
+
+      <input type="email" name="email" class="email" placeholder="Correo electrónico" maxlength="320" pattern="^[a-z0-9!#$%\x26'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%\x26'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required />
+   
+      <input type="password" placeholder="Contraseña" class="password" title="Can contain any character. The length may vary between seven and hundred characters" maxlength="100" pattern=".{8,100}" required />
+   
+      <input type="submit" class="submit btn cta" value="Registrarse" />
+
+      <div class="form-text">By clicking 'Sign up' you agree to the our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</div>
+       
+    </form>
+
+  
+  <footer>
+
+  <!--<img src="/assets/logo-footer.png" alt="bonito"  class="footer-logo"/>
+  <p class="footer-text"></p>
+        <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="#"><img alt="Twitter" src="/assets/twitter.png" /></a>
+        <a href="#"><img alt="Youtube" src="/assets/youtube.png" /></a>
+        <a href="#"><img alt="Skype" src="/assets/skype.png" /></a>
+        <a href="#"><img alt="Facebook" src="/assets/facebook.png" /></a>
+      </div>
+      <!-- Social Icons End -->
+  </footer>
+
+</div>
+
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
+
