@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130709030023) do
+ActiveRecord::Schema.define(:version => 20130709164332) do
+
+  create_table "comentarios", :force => true do |t|
+    t.integer  "microcuento_id"
+    t.text     "contenido"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "comentarios", ["microcuento_id"], :name => "index_comentarios_on_microcuento_id"
 
   create_table "microcuentos", :force => true do |t|
     t.string   "title"

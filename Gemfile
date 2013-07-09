@@ -7,9 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'devise'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails'#, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'paperclip'
-
+gem 'simple_form'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

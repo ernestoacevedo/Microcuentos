@@ -1,4 +1,11 @@
 Microcuentos::Application.routes.draw do
+  resources :comentarios
+   resources :microcuentos do
+
+      resources :comentarios
+   end
+
+
   devise_for :users
 
   get "home/index"

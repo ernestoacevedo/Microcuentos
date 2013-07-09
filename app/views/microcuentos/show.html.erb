@@ -23,3 +23,19 @@
 
 <%= link_to 'Edit', edit_microcuento_path(@microcuento) %> |
 <%= link_to 'Back', microcuentos_path %>
+
+<H4>Comentarios</H4>
+   <div id="comentarios">
+   		<%=render :partial => @microcuento.comentarios%>
+   	</div>
+   	<%= simple_form_for [@microcuento, Comentario.new] do |f| %>
+   	<p>
+   		<%= f.input :contenido, :label =>"Nuevo Comentario",as: :text, input_html:
+   		 { rows: "3" } %>
+   	</p>
+   	<p><%=f.submit"Comentar", class:"btn btn-primary"%>
+   	</p>
+   	<% end %>
+
+   	</div>
+   	</div> 

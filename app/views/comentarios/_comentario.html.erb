@@ -1,0 +1,6 @@
+<%=div_for(comentario) do %>
+<p>
+	<strong>Posted <%= time_ago_in_words(comentario.created_at) %> ago</strong></br>
+	<%= h(comentario.contenido) %>
+	</p>
+<% end %>

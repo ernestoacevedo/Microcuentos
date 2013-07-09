@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Microcuento:</b>
+  <%= @comentario.microcuento_id %>
+</p>
+
+<p>
+  <b>Contenido:</b>
+  <%= @comentario.contenido %>
+</p>
+
+
+<%= link_to 'Edit', edit_comentario_path(@comentario) %> |
+<%= link_to 'Back', comentarios_path %>
