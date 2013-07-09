@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Microcuentos</title>
+  <title>Microposts<%= yield(:title)%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
@@ -16,15 +16,14 @@
         <li><a href="/microcuentos/new">.escribir</a></li>
         <li><a href="#" >@<%= current_user.name %></a>
         <ul>
-          <li><a href="">Perfil</a></li>
-          <li><a href="">Configuración</a></li>
+          <li><a href="/users/<%= current_user.id %>">Perfil</a></li>
+          <li><a href="/users/edit">Editar cuenta</a></li>
           <li><a href="/users/sign_out">Cerrar sesión</a></li>
         </ul>
         </li>
         <% else %>
         <li><a href="/users/sign_in">.ingresar</a></li>
         <li><a href="#signup-form" class="modal-form signup">.únete</a></li>
-</li>
         <% end %>
     </ul>
   </div>
@@ -60,7 +59,9 @@
   <footer>
 
   <!--<img src="/assets/logo-footer.png" alt="bonito"  class="footer-logo"/>
-  <p class="footer-text"></p>
+  <p class="footer-text"></p> -->
+  <div class="row">
+    <div class="span2 offset10">
         <!-- Social Icons -->
       <div class="social-icons">
         <a href="#"><img alt="Twitter" src="/assets/twitter.png" /></a>
@@ -69,6 +70,9 @@
         <a href="#"><img alt="Facebook" src="/assets/facebook.png" /></a>
       </div>
       <!-- Social Icons End -->
+    </div>
+  </div>
+      
   </footer>
 
 </div>
