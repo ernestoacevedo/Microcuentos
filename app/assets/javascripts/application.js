@@ -15,6 +15,28 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+var signUp = function(n,e,p){
+    $.ajax({
+      type: 'POST',
+      url: '/users',
+      data: {user: {name: n,email: e,password: p}},
+      dataType: 'JSON'
+    }).done(function(){
+      alert("Datos registrados!");
+      window.location.href = "/";
+    });
+};
+
+$('#signup-button').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var name = $('#user_name').val();
+    var email = $('#user_email').val();
+    var password = $('#user_password').val();
+    console.log(name);
+    signUp(name,email,password);
+});
+
 !function ($) {
 
   $(function(){
