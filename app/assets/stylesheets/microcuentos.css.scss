@@ -1,3 +1,24 @@
 // Place all the styles related to the Microcuentos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+input {
+	width:300px;
+	height:50px;
+	margin-bottom:10px;
+	padding-left:20px;
+	vertical-align:middle;
+	color:#8d8d8d;
+}
+textarea {
+	height:135px;
+	vertical-align:text-top;
+	width:300px;
+	min-width:300px;
+	max-width:400px;
+	padding-left:20px;
+	padding-top:20px;
+	color:#8d8d8d;
+	font-family:Arial, Helvetica, sans-serif;
+
+}

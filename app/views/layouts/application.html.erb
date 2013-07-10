@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Microposts<%= yield(:title)%></title>
+  <title>Microcuentos<%= yield(:title)%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
@@ -37,8 +37,8 @@
     <!-- SIGN UP FORM MODAL -->
     <form id="signup-form" class="mfp-hide white-popup-block zoom-anim-dialog user-form">
       <h2>Únete a nosotros</h2>
-      <a href="#" class="btn facebook">Registrarse con Facebook</a>
-      <a href="#" class="btn twitter">Registrarse con Twitter</a>
+      <a href="/auth/facebook" class="btn facebook">Registrarse con Facebook</a>
+      <a href="/auth/twitter" class="btn twitter">Registrarse con Twitter</a>
       <!-- <a href="#" class="btn google">Sign up with Google+</a> -->
 
       <div class="divider"><span class="dashed-line"></span>ó<span class="dashed-line"></span></div>
@@ -51,7 +51,7 @@
    
       <input type="submit" class="submit btn cta" value="Registrarse" />
 
-      <div class="form-text">By clicking 'Sign up' you agree to the our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</div>
+      <div class="form-text">Al hacer clic en 'Registrarse' estarás de acuerdo con nuestros <a href="#">Términos de servicio</a> y <a href="#">Política de privacidad</a>.</div>
        
     </form>
 
