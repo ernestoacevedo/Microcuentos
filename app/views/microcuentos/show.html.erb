@@ -1,25 +1,50 @@
+
+<div class="row">
+  <div class="span4 offset3">
+
+    Escrito por 
+    <a href="/users/<%= @microcuento.user_id %>"><%= @microcuento.user.name %></a>
+
+    <!-- <img alt="heart" src="/assets/heart-icon.png"></img> -->
+    <%= @microcuento.likes %>
+
+
+  <div id="mybook">
+    <div> 
+          <h3><%= @microcuento.title %></h3> <br>
+          <%= image_tag @microcuento.portada.url(:medium) %>
+    </div>
+    <div> 
+        
+    </div>
+    <div> 
+        
+    </div>
+    <div> 
+        <p><%= @microcuento.content %></p>
+    </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @microcuento.title %>
-</p>
+<% if @microcuento.comentarios.count != 0 %>
+  <h4>Comentarios</h4>
+  <div id="comentarios">
+    <ul class="media-list">
+    <%=render :partial => @microcuento.comentarios%>
+    </ul>
+  </div>
 
-<p>
-  <b>User:</b>
-  <%= @microcuento.user_id %>
-</p>
+<% end %>
 
-<p>
-  <b>Likes:</b>
-  <%= @microcuento.likes %>
-</p>
+<% if user_signed_in?%>
 
-<p>
-  <b>Content:</b>
-  <%= @microcuento.content %>
-</p>
+  <%= simple_form_for [@microcuento, Comentario.new] do |f| %>
+     <p><%= f.input :contenido, :label =>"Nuevo Comentario",as: :text, input_html:{ rows: "3" } %></p>
+     <p><%=f.submit"Comentar", class:"btn btn-primary"%></p>
+  <% end %>
 
+<% end %>
 
-<%= link_to 'Edit', edit_microcuento_path(@microcuento) %> |
-<%= link_to 'Back', microcuentos_path %>
+  </div> 
+</div>

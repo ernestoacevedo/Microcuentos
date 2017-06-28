@@ -11,6 +11,13 @@
  *= require_self
  *= require_tree .
  */
+::selection {
+  background: #e24844;
+}
+::-moz-selection {
+  background: #e24844;
+}
+
 #titulo{
 	color: #FFF;
 	text-decoration: none;
@@ -77,6 +84,12 @@
   box-shadow: 0 6px #dddddd;
 }
 #signup-form h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  text-align: center;
+}
+#login-form h2 {
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 1em;
@@ -218,14 +231,12 @@
   filter: alpha(opacity=50);
   -webkit-transition: opacity 0.5s linear;
 
-  
 }
 .social-icons img:hover {
   opacity:1;
   filter:alpha(opacity=100); /* For IE8 and earlier */
   -webkit-transition: opacity 0.2s linear;
 }
-
 
 footer {
   height:80px;

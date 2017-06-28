@@ -17,3 +17,16 @@
   .no-space [class*="span"] {
     margin-left: 0;
 }
+
+.popover{
+  width: 400px;
+}
+
+label{
+  display: inline;
+}
+
+input[type="checkbox"] {
+  margin: 0px;
+  line-height: normal;
+}

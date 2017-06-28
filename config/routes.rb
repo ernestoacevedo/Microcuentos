@@ -2,13 +2,14 @@ Microcuentos::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
   resources :authentications
 
+  resources :comentarios
+  resources :microcuentos do
+      resources :comentarios
+  end
+
   devise_for :users
-
   get "home/index"
-
   resources :microcuentos
-
-
   resources :users
 
 

@@ -8,9 +8,14 @@
           <img id="avatar" src="<%= @user.avatar.url(:thumb) %>" />
         </div>
         <div class="span2">
-          
+          <% if @user.lastname.nil? %>
+          <h5><%= @user.name %></h5>
+          <p>@<%= @user.name.downcase %></p>
+          <% else %>
           <h5><%= @user.name+" "+@user.lastname%></h5>
           <p>@<%= @user.name.downcase %></p>
+          <% end %>
+          
         </div>
       </div>
 
@@ -30,7 +35,11 @@
 
           <li>
             <figure>
-            <img src="/assets/150x200.gif" alt="">
+            <% if microcuento.portada_file_name %>
+              <img src="<%=microcuento.portada.url(:medium) %>" alt="">
+            <%else %>
+              <img src="/assets/150x200.gif" alt="">
+            <% end %>
             <figcaption>
             <h5><%=microcuento.title%></h5>
             <span>Autor: <%= microcuento.user.name %></span>

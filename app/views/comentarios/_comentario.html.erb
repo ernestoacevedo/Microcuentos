@@ -1,0 +1,16 @@
+<%=div_for(comentario) do %>
+  <li class="media comment">
+  <a class="pull-left" href="#">
+    <img class="media-object img-circle"
+	<% if comentario.user.avatar_file_name.nil? %>
+	src="/assets/50x50.gif">
+	<% else %>
+    src="<%= comentario.user.avatar.url(:mini) %>">
+    <% end %>
+  </a>
+  <div class="media-body">
+    <strong><a href="/users/<%= comentario.user.id %>"><%= comentario.user.name %></a> hace <%= time_ago_in_words(comentario.created_at) %> escribió:</strong></br>
+	<%= h(comentario.contenido) %>
+  </div>
+  </li>
+<% end %>

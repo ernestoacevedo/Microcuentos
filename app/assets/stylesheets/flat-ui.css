@@ -1669,7 +1669,7 @@ textarea[class*="span"] {
 .checkbox,
 .radio {
   margin-bottom: 12px;
-  padding-left: 32px;
+  padding-left: 10px;
   position: relative;
   -webkit-transition: color 0.25s linear;
   -moz-transition: color 0.25s linear;
